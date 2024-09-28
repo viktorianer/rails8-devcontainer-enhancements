@@ -1,0 +1,22 @@
+footer.text-muted.mt-3.py-3.mt-auto
+  - unless Rails.env.production?
+    .container-lg.bg-light
+      = debug(request.url)
+      = debug(params)
+      = debug(session.to_hash)
+  nav.navbar.navbar-expand-lg.navbar-light.bg-light
+    .container-lg.container-fluid
+      small.rails-logo.mr-auto
+        = link_to image_tag("rails.svg", alt: "Ruby on Rails logo", width: "100", class: "d-inline-block align-top"),
+          "http://rubyonrails.org/", class: "navbar-brand"
+        ul.navbar-nav.me-auto.mb-3.mb-lg-0.mt-3
+          li.nav-item
+            = link_to "About", about_path, class: "nav-link"
+          li.nav-item
+            = link_to "Contact", contact_us_path, class: "nav-link"
+          li.nav-item
+            = link_to "Imprint", imprint_path, class: "nav-link"
+          li.nav-item
+            = link_to "Data Protection", data_protection_path, class: "nav-link"
+          li.nav-item
+            = link_to "Help", help_path, class: "nav-link"
