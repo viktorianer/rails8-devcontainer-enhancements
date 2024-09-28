@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= content_for(:title) || "Rails8 Devcontainer Enhancements" %></title>
+    <title><%= content_for(:title) || "Rails 8 Dev Container Enhancements" %></title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="mobile-web-app-capable" content="yes">
@@ -24,6 +24,17 @@
   </head>
 
   <body>
-    <%= yield %>
+    <%= render "layouts/header" %>
+    <div class="container-lg">
+      <% if notice %>
+        <div class="alert alert-success alert-dismissible fade show">
+          <%= notice %>
+          <%= link_to "", "", data: { "bs-dismiss": :alert }, aria: { label: "Close" }, class: "btn-close" %>
+        </div>
+      <% end %>
+
+      <%= yield %>
+    </div>
+    <%= render "layouts/footer" %>
   </body>
 </html>
