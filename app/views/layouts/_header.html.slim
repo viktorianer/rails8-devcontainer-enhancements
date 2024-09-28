@@ -1,0 +1,32 @@
+nav.navbar.navbar-expand-lg.navbar-light.bg-light
+  .container-lg.container-fluid
+    = link_to "RAILS8_DEVCONTAINER_ENHANCEMENTS", root_path, class:"navbar-brand"
+    button.navbar-toggler [
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarTop"
+      aria-controls="navbarTop"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    ]
+      span.navbar-toggler-icon
+    #navbarTop.collapse.navbar-collapse
+      ul.navbar-nav.me-auto
+        li.nav-item.dropdown
+          a.nav-link.dropdown-toggle [
+            href="#"
+            id="navbarDropdownSubPages"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          ]
+            | Sub Pages
+          ul.dropdown-menu [aria-labelledby="navbarDropdownSubPages"]
+            li
+              = link_to "Sub page 1", "#", class: "dropdown-item"
+            li
+              = link_to "Sub page 2", "#", class: "dropdown-item"
+        li.nav-item
+          = link_to "Page X", "#", class: "nav-link"
+        li.nav-item
+          = link_to "Paxe Y", "#", class: "nav-link"

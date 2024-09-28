@@ -24,6 +24,17 @@
   </head>
 
   <body>
-    <%= yield %>
+    <%= render "layouts/header" %>
+    <div class="container-lg">
+      <% if notice %>
+        <div class="alert alert-success alert-dismissible fade show">
+          <%= notice %>
+          <%= link_to "", "", data: { "bs-dismiss": :alert }, aria: { label: "Close" }, class: "btn-close" %>
+        </div>
+      <% end %>
+
+      <%= yield %>
+    </div>
+    <%= render "layouts/footer" %>
   </body>
 </html>
