@@ -144,6 +144,9 @@ GEM
       raabro (~> 1.4)
     globalid (1.2.1)
       activesupport (>= 6.1)
+    hpricot (0.8.6)
+    html2slim-ruby3 (0.2.1)
+      hpricot
     i18n (1.14.6)
       concurrent-ruby (~> 1.0)
     io-console (0.7.2)
@@ -284,6 +287,13 @@ GEM
       rexml (~> 3.2, >= 3.2.5)
       rubyzip (>= 1.2.2, < 3.0)
       websocket (~> 1.0)
+    slim (5.2.1)
+      temple (~> 0.10.0)
+      tilt (>= 2.1.0)
+    slim-rails (3.6.3)
+      actionpack (>= 3.1)
+      railties (>= 3.1)
+      slim (>= 3.0, < 6.0, != 5.0.0)
     solid_cable (3.0.1)
       actioncable (>= 7.2)
       activejob (>= 7.2)
@@ -309,12 +319,14 @@ GEM
     stimulus-rails (1.3.4)
       railties (>= 6.0.0)
     stringio (3.1.1)
+    temple (0.10.3)
     thor (1.3.2)
     thruster (0.1.8)
     thruster (0.1.8-aarch64-linux)
     thruster (0.1.8-arm64-darwin)
     thruster (0.1.8-x86_64-darwin)
     thruster (0.1.8-x86_64-linux)
+    tilt (2.4.0)
     timeout (0.4.1)
     turbo-rails (2.0.10)
       actionpack (>= 6.0.0)
@@ -352,6 +364,7 @@ DEPENDENCIES
   capybara
   cssbundling-rails
   debug
+  html2slim-ruby3
   jsbundling-rails
   kamal (>= 2.0.0.rc2)
   pg (~> 1.1)
@@ -360,6 +373,7 @@ DEPENDENCIES
   rails!
   rubocop-rails-omakase
   selenium-webdriver
+  slim-rails (~> 3.6)
   solid_cable
   solid_cache
   solid_queue
