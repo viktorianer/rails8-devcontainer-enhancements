@@ -52,6 +52,9 @@ group :development, :test do
 end
 
 group :development do
+  # Convert HTML to Slim templates. Because HTML sux and Slim rules. That's why.
+  gem "html2slim-ruby3", require: false
+
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem "web-console"
 end
@@ -61,3 +64,6 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
 end
+
+# Provides the generator settings required for Rails 3+ to use Slim
+gem "slim-rails", "~> 3.6"
