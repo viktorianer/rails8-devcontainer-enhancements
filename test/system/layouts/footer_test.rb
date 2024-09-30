@@ -3,8 +3,9 @@
 require "application_system_test_case"
 
 class FooterTest < ApplicationSystemTestCase
-  setup do
-    @base_title = "Rails8 Devcontainer Enhancements"
+  def setup
+    super
+    @base_title = "Rails 8 Dev Container Enhancements"
   end
 
   test "visiting about page" do

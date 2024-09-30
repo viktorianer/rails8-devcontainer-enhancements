@@ -3,8 +3,9 @@
 require "application_system_test_case"
 
 class HeaderTest < ApplicationSystemTestCase
-  setup do
-    @base_title = "Rails8 Devcontainer Enhancements"
+  def setup
+    super
+    @base_title = "Rails 8 Dev Container Enhancements"
   end
 
   test "visiting sub pages" do
