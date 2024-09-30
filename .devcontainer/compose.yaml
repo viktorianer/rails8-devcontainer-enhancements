@@ -2,6 +2,7 @@ name: "rails8_devcontainer_enhancements"
 
 services:
   rails-app:
+    image: rails8_devcontainer_enhancements_rails_app
     build:
       context: ..
       dockerfile: .devcontainer/Dockerfile
@@ -39,4 +40,6 @@ services:
 
 volumes:
   bundle-data:
+    name: rails8_devcontainer_enhancements_bundle_data
   postgres-data:
+    name: rails8_devcontainer_enhancements_postgres_data
