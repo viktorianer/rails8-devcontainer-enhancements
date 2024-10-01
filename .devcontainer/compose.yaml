@@ -3,6 +3,7 @@ name: "rails8_devcontainer_enhancements"
 services:
   rails-app:
     image: rails8_devcontainer_enhancements_rails_app
+    user: "vscode"
     build:
       context: ..
       dockerfile: .devcontainer/Dockerfile
