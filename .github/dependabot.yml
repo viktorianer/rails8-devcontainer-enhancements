@@ -3,10 +3,60 @@ updates:
 - package-ecosystem: bundler
   directory: "/"
   schedule:
-    interval: daily
+    interval: weekly
   open-pull-requests-limit: 10
+  versioning-strategy: increase-if-necessary
+  groups:
+    bundler-patch:
+      patterns:
+        - "*"
+      update-types:
+        - patch
+    bundler-minor:
+      patterns:
+        - "*"
+      update-types:
+        - minor
+    bundler-major:
+      applies-to: security-updates
+      patterns:
+        - "*"
+      update-types:
+        - major
+  ignore:
+    - dependency-name: "rails"
+      update-types:
+        - version-update:semver-major
+        - version-update:semver-minor
+- package-ecosystem: npm
+  directory: "/"
+  schedule:
+    interval: weekly
+  open-pull-requests-limit: 10
+  versioning-strategy: increase-if-necessary
+  groups:
+    npm-patch:
+      patterns:
+        - "*"
+      update-types:
+        - patch
+    npm-minor:
+      patterns:
+        - "*"
+      update-types:
+        - minor
+    npm-major:
+      applies-to: security-updates
+      patterns:
+        - "*"
+      update-types:
+        - major
+  ignore:
+    - dependency-name: "bootstrap"
+      update-types:
+        - version-update:semver-major
 - package-ecosystem: github-actions
   directory: "/"
   schedule:
-    interval: daily
+    interval: weekly
   open-pull-requests-limit: 10
