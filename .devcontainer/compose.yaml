@@ -2,12 +2,14 @@ name: "rails8_devcontainer_enhancements"
 
 services:
   rails-app:
+    image: rails8_devcontainer_enhancements_rails_app
+    user: "vscode"
     build:
       context: ..
       dockerfile: .devcontainer/Dockerfile
 
     volumes:
-    - ../..:/workspaces:cached
+    - ../:/app:cached
     - bundle-data:/home/vscode/.rbenv
 
     # Overrides default command so things don't shut down after the process ends.
@@ -39,4 +41,6 @@ services:
 
 volumes:
   bundle-data:
+    name: rails8_devcontainer_enhancements_bundle_data
   postgres-data:
+    name: rails8_devcontainer_enhancements_postgres_data
