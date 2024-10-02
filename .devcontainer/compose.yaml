@@ -8,6 +8,7 @@ services:
 
     volumes:
     - ../..:/workspaces:cached
+    - bundle-data:/home/vscode/.rbenv
 
     # Overrides default command so things don't shut down after the process ends.
     command: sleep infinity
@@ -37,4 +38,5 @@ services:
         POSTGRES_PASSWORD: postgres
 
 volumes:
+  bundle-data:
   postgres-data:
