@@ -55,6 +55,9 @@ group :development do
   # Convert HTML to Slim templates. Because HTML sux and Slim rules. That's why.
   gem "html2slim-ruby3", require: false
 
+  # bundler-audit provides patch-level verification for Bundled apps.
+  gem "bundler-audit", "~> 0.9", require: false
+
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem "web-console"
 end
