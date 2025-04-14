@@ -32,7 +32,7 @@ gem "solid_cable"
 gem "bootsnap", require: false
 
 # Deploy this application anywhere as a Docker container [https://kamal-deploy.org]
-gem "kamal", ">= 2.0.0.rc2", require: false
+gem "kamal", require: false
 
 # Add HTTP asset caching/compression and X-Sendfile acceleration to Puma [https://github.com/basecamp/thruster/]
 gem "thruster", require: false
@@ -54,6 +54,9 @@ end
 group :development do
   # Convert HTML to Slim templates. Because HTML sux and Slim rules. That's why.
   gem "html2slim-ruby3", require: false
+
+  # bundler-audit provides patch-level verification for Bundled apps.
+  gem "bundler-audit", "~> 0.9", require: false
 
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem "web-console"
